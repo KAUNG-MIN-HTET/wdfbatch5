@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Window History</title>
+</head>
+<style type="text/css">
+
+	body {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	
+	ul {
+		list-style: none;
+
+		padding: 0;
+		margin: 0;
+
+		display: flex;
+		justify-content: center;
+	}
+	li {
+		width: 200px;
+		background-color: blue;
+		color: #fff;
+		text-align: center;
+		padding: 20px 0;
+
+		transition: all 0.2s;
+		cursor: pointer;
+	}
+
+	li:hover {
+		background-color: skyblue;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	.active {
+		background-color: skyblue;
+	}
+
+	.historybar {
+		background-color: silver;
+		width: 75%;
+		margin: auto;
+
+		padding: 20px;
+		margin-top: 50px;
+	}
+
+	span {
+		cursor: pointer;
+        user-select: none;
+	}
+
+    h1 {
+        text-align: center;
+    }
+
+</style>
+<body>
+
+	<div>
+		<nav>
+			<ul>
+				<a href="./jswindowhistory.html"><li>Home</li></a>
+				<a href="./jswindowhistorynews.html"><li class="active">News</li></a>
+				<a href="./jswindowhistoryebook.html"><li>Ebook</li></a>
+				<a href="./jswindowhistorymusic.html"><li>Music</li></a>
+				<a href="./jswindowhistoryvideo.html"><li>Video</li></a>
+			</ul>
+		</nav>
+	</div>
+
+	<div class="historybar">
+		<span onclick="gobackward()">Go Backward</span> / <span>Home</span> / <span onclick="goforward()">Go Forward</span>
+	</div>
+
+    <div>
+		<h1>I am News Page sir.</h1>
+	</div>
+
+	<script type="text/javascript">
+		
+		function gobackward() {
+			// console.log('backwork is working');
+			// window.history.back();
+			window.history.go(-1);
+		}
+
+		function goforward() {
+			// console.log("forward is working");
+			// window.history.forward();
+			window.history.go(1);
+		}
+
+		// let val = window.history.length;
+		// console.log(val);
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Stick&display=swap');*/
+/*@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap');*/
+
+/*Global Font Integrate by Local Folder*/
+@font-face{
+	font-family:Stick;
+	src:local('Stick-Regular'),url('../libs/fonts/stick/Stick-Regular.ttf') format('woff');
+}
+
+@font-face{
+	font-family:'abc';
+	src:local('AkayaTelivigala-Regular'),url('../libs/fonts/akayatelivigala/AkayaTelivigala-Regular.ttf') format('woff');
+}
+
+/*art-rules
+@import
+@page
+@media
+@font-face
+@charset
+@namespace*/
+
+
+/*CDN = Content Deliver Network*/
+/*Global Font Integrate*/
+/*body{
+	font-family:'Stick', sans-serif;
+}*/
+
+.p1{
+	font-family:'Stick', sans-serif;
+}
+
+.p2{
+	font-family:'abc', sans-serif;
+}
+
+.p3{
+	font-family:'Stick', sans-serif;
+}
+
+
+
+/*Local Font Integrate*/
+/*LM (local Machine)*/
+/*body{*/
+	/*font-family:Century;*/
+	/*font-family:'Times New Roman';*/
+/*}*/
+
+/*.p1{
+	font-family:Arial;
+}*/
+
+/*.p2{
+	font-family:Century;
+}*/
+
+/*first in, first out*/
+/*.p3{
+	font-family:Century,Arial,'Times New Roman';
+}*/
+
+
+
+
+
+
+
+/*.p1{*/
+	/*text-transform:uppercase;*/
+	/*text-transform:lowercase;*/
+	/*text-transform:capitalize;*/
+
+	/*font-variant:small-caps;*/
+
+	/*Text Indentation*/
+	/*text-indent:50px;*/
+
+	/*font-style:italic;*/
+
+	/*font-weight:bold;*/
+			/*100 to 900*/
+	/*font-weight:600;*/
+/*}*/
+
+.a1{
+	text-decoration:none;
+	/*color:purple;*/
+}
+
+
+/*pseudoclass*/
+.a1:visited{
+	color:green;
+}
+
+.a1:hover{
+	color:blue;
+	font-size:20px;
+}
+
+.menutext{
+	font-family:Arial,Cambria,Century;
+	text-decoration:none;
+	background-color:green;
+	color:white;
+
+	padding:20px;
+
+			/*top&bottom left&right*/
+	/*padding:10px 30px;*/
+
+	/*padding:10px 20px 30px 40px;*/
+
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left:20px;
+	padding-right:20px;
+
+	border-radius:5px;
+}
+
+.menutext:hover{
+	color:gold;
+	background-color:blue;
+	font-size:20px;
+	border-radius:50px;
+
+	transition:0.5s;
+}
+
+.imgdesign{
+	width:80px;
+	height:80px;
+
+	cursor:pointer;
+}
+
+.imgdesign:hover{
+	width:100px;
+	height:100px;
+
+	transition:1s;
+}
+
+/*100 = thin
+200 = light
+300 = book
+400 = regular
+500 = Medium
+600 = semi-bold
+700 = bold
+800 = heavy
+900 = extra-black/poster

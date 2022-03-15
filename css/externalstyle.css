@@ -1,0 +1,41 @@
+/*Element Selector*/
+/*Single Selector*/
+h1{
+	color:red;
+}
+
+/*Group Selector(,)*/
+h2,h3,h4{
+	color:red;
+}
+
+/*ID Selector*/
+/*#pray{
+	color:blue;
+}
+
+#myself{
+	color:green;
+}
+
+#SAC{
+	color:orange;
+}*/
+
+#pray,#SAC{
+	color:blue;
+}
+
+/*Class Selector*/
+.redcolor{
+	color:red;
+}
+
+.f20{
+	font-size:20px;
+}
+
+.abc,.efg{
+	color:orange;
+}
+

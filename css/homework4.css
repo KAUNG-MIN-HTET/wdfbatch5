@@ -1,0 +1,56 @@
+body{
+	background-image:url('../img/background.jpg')
+}
+
+
+h1{
+	text-shadow:-5px -5px 3px black;
+	color:white;
+}
+
+.line{
+	width:1318px;
+	height:400px;
+}
+
+@font-face{
+	font-family:Stick;
+	src:local('Stick-Regular'),url('../libs/fonts/stick/Stick-Regular.ttf') format('woff');
+}
+
+
+.design{
+	color:yellow;
+	font-family:'Stick', sans-serif;
+}
+
+.id{
+	color:yellow;
+	font-family:'Stick', sans-serif;
+	margin:0;
+}
+
+
+.form{
+	width:300px;
+	height:265px;
+	border:2px dotted white;
+	background-color:rgba(255,255,255,0.25);
+}
+
+.table{
+	color:white;
+	text-shadow:-5px -3px 3px black;
+}
+
+
+.lorem{
+	color:white;
+	text-align:justify;
+}
+
+
+.register{
+	color:yellow;
+	text-decoration:underline;
+}

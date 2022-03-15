@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows Object</title>
+
+    <style type="text/css">
+
+        @media print {
+            * {
+                visibility: hidden;
+            }
+
+            #printArea * {
+                visibility: visible;
+            }
+
+            @page {
+                /* size: portrait; */
+                /* size: landscape; */
+                size: auto;
+                margin: 0;
+            }
+        }
+
+        .span {
+            height: 100vh;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <button onclick="printMe()">print</button>
+    <button onclick="refresh()">Reload</button>
+
+    <hr/>
+
+    <div id="printArea">
+
+    <div>
+        <h1>This is paragraph 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error cum reprehenderit commodi cumque quia laborum, impedit animi! Ratione dolores velit, alias id quos sapiente vel, eius mollitia voluptas numquam magni labore, voluptatibus rem laborum! Facere recusandae ipsa tempore, deleniti vel voluptatibus explicabo dicta deserunt nostrum sed perferendis dolore ipsam veritatis reiciendis ipsum corporis? Laudantium distinctio neque deleniti rem velit!</p>
+    </div>
+
+    <div>
+        <h1>This is paragraph 2</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error cum reprehenderit commodi cumque quia laborum, impedit animi! Ratione dolores velit, alias id quos sapiente vel, eius mollitia voluptas numquam magni labore, voluptatibus rem laborum! Facere recusandae ipsa tempore, deleniti vel voluptatibus explicabo dicta deserunt nostrum sed perferendis dolore ipsam veritatis reiciendis ipsum corporis? Laudantium distinctio neque deleniti rem velit!</p>
+    </div>
+
+    </div>
+
+    <div>
+        <h1>This is paragraph 3</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita error cum reprehenderit commodi cumque quia laborum, impedit animi! Ratione dolores velit, alias id quos sapiente vel, eius mollitia voluptas numquam magni labore, voluptatibus rem laborum! Facere recusandae ipsa tempore, deleniti vel voluptatibus explicabo dicta deserunt nostrum sed perferendis dolore ipsam veritatis reiciendis ipsum corporis? Laudantium distinctio neque deleniti rem velit!</p>
+    </div>
+
+    <hr/>
+
+    <!-- <div class="span">
+        <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. At facere accusantium adipisci, animi esse odio illo delectus quisquam voluptatum debitis, quibusdam nisi? Nemo repellendus accusamus doloremque ut odio non ex praesentium quos adipisci, inventore doloribus exercitationem sequi fuga in animi nulla neque, eaque earum quidem totam facilis accusantium eos aut qui! Quos natus doloribus, est voluptatibus totam consequuntur? Voluptatum laborum doloremque voluptatibus amet non unde rem illo in, beatae eos!</pre>
+    </div> -->
+
+
+    <script type="text/javascript">
+
+        // Window Object
+
+        // Alert
+        // window.alert("Hello World");
+
+        // Prompt
+        // const input = prompt("Write Something");
+        // console.log(input);
+
+        // Confirm
+        // if(confirm("Are you sure")) {
+        //     console.log("Yes i want to delete");
+        // }else{
+        //     console.log("Ohh sorry i don\'t");
+        // }
+
+        // Print
+        // window.print();
+
+        // document.querySelector("body").innerHTML = `<button onclick="printMe()">Print</button>`;
+
+        function printMe() {
+            // console.log("hey");
+            window.print();
+        }
+
+        let val;
+
+        // Outer width and height
+        val = window.outerWidth;
+        console.log('this is outer width = ' + val);
+        val = window.outerHeight;
+        console.log('this is outer height = ' + val);
+        val = window.innerWidth;
+        console.log('this is inner width = ' + val);
+        val = window.innerHeight;
+        console.log('this is inner height = ' + val);
+
+        // Scroll Points
+
+        val = window.scrollY;
+        console.log(val);
+
+        val = window.scrollX;
+        console.log(val);
+
+        // 20.1.2022
+        // Redirect
+        // window.location.href = "https://google.com";
+
+        // Reload
+        // window.location.reload();
+        function refresh() {
+            window.location.reload();
+        }
+
+
+
+        // Navigator Object
+        // console.log(window.navigator);
+        document.write("navigator.userAgent result = " + window.navigator.userAgent + "<br/>");
+        document.write("navigator.cookieEnabled result = " + window.navigator.cookieEnabled + "<br/>");
+        document.write("navigator.language result = " + window.navigator.language + "<br/>");
+        document.write("navigator.onLine result = " + window.navigator.onLine + "<br/>");
+
+    </script>
+    
+</body>
+</html>

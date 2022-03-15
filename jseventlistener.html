@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+
+    <div>
+        <h3>Show Hide Button</h3>
+        <div id="paragraph">
+            <p id="abc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nobis adipisci unde, sint, neque harum quis eaque sed praesentium sit veniam cupiditate voluptatum architecto, pariatur nostrum! Vero doloribus sed optio nihil libero praesentium ea fugit pariatur quas! Unde, incidunt delectus vitae est nesciunt corporis omnis id eum ipsa doloribus nemo sunt, consequuntur, voluptate blanditiis accusantium et fugiat dicta distinctio necessitatibus eos. Sunt, quaerat, velit asperiores laborum suscipit tempore quis deleniti quia omnis, saepe ipsa eaque. Veniam, nostrum quidem ipsa, quae voluptas accusantium corporis autem necessitatibus tempora a odio repellendus ipsam nisi placeat maxime dolor est? Nam expedita accusantium voluptatem suscipit?
+            </p>
+        </div>
+        <button type="button" id="hideMe">Hide Me</button>
+    </div>
+
+    <hr />
+
+    <div>
+        <p id="mm">We Love Myanmar</p>
+        <button type="button" id="btn">Red</button>
+        <button type="button" id="btn">Green</button>
+        <button type="button" id="btn">Blue</button>
+        <button type="button" id="btn">Orange</button>
+        <button type="button" id="btn">Bold Text</button>
+        <button type="button" id="btn">Italic Text</button>
+        <button type="button" id="btn">Underline Text</button>
+    </div>
+
+    <hr>
+
+    <!-- 17.2.2022 -->
+
+    <div>
+        <form action="" method="">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" onchange="myfun()">
+
+            <br><br>
+
+            <label for="address">Address</label>
+            <input type="text" name="address" id="address" />
+
+            <br><br>
+
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender" onchange="genderfun()">
+                <option disabled selected">Choose Gender</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+            <br><br>
+        
+            <label for="for"></label>
+            <select name="gender" id="gender" onchange="genderfun()">
+                <option disabled selected">Choose Gender</option>
+                <option value="1">Male</option>
+                <option value="0">Female</option>
+            </select>
+
+            <br><br>
+
+            <label for="country">Country</label>
+            <select name="country" id="country" onchange="countryfun()">
+                <option selected disabled>Choost Country</option>
+                <option value="mm">Myanmar</option>
+                <option value="th">Thailand</option>
+            </select>
+
+            <br><br>
+
+            <div id="mmcity">
+            <input type="radio" name="city" id="cityyng" value="yangon"><label for="cityyng">Yangon</label>
+            <input type="radio" name="city" id="citymdy" value="mandalay"><label for="citymdy">Mandalay</label>
+            <input type="radio" name="city" id="citybgo" value="bago"><label for="citybgo">Bago</label>
+            </div>
+
+            <div id="thcity">
+            <input type="radio" name="city" id="citybkk" value="bangkok"><label for="citybkk">Bangkok</label>
+            <input type="radio" name="city" id="citypkt" value="phuket"><label for="citypkt">Phuket</label>
+            <input type="radio" name="city" id="citymst" value="maesot"><label for="citymst">Mae Sot</label>
+            </div>
+        </form>
+    </div>
+
+
+    <script type="text/javascript">
+
+        let btn = document.getElementById("hideMe");
+        let p = document.getElementById("paragraph");
+
+        btn.addEventListener("click",function() {
+            if(btn.innerText === "Hide Me") {
+
+                p.style.display = "none";
+                this.innerText = "Show Me";
+
+            1}else {
+
+                p.style.display = "block";
+                this.innerText = "Hide Me";
+
+            }
+        });
+
+        let button = document.querySelectorAll("#btn");
+        let mm = document.getElementById("mm");
+
+        button.forEach((x) => {
+            x.addEventListener("click",() => {
+                if(x.innerText === "Red") {
+                mm.style.color = "red";
+            }else if(x.innerText === "Green") {
+                mm.style.color = "green";
+            }else if(x.innerText === "Blue") {
+                mm.style.color = "blue";
+            }else if(x.innerText === "Orange") {
+                mm.style.color = "orange";
+            }
+            else if(x.innerText === "Bold Text") {
+                mm.style.fontWeight = "bold";
+            }else if(x.innerText === "Italic Text") {
+                mm.style.fontStyle = "italic";
+            }else {
+                mm.style.textDecoration = "underline";
+            }
+            })
+        });
+
+        // 17.2.2022
+
+        //for name
+
+        function myfun() {
+            //console.log('thanks for your typing');
+
+            let txtname = document.getElementById("name");
+            // console.log(txtname.value);
+
+            txtname.value = txtname.value.toUpperCase();
+        }
+
+        // for gender
+
+        function genderfun() {
+            //console.log("hey i am working");
+
+            let gnd = document.getElementById("gender");
+            //console.log(gnd.value);
+            // console.log(typeof gnd.value);
+
+            switch(gnd.value) {
+                case "0":
+                window.alert("Thanks Lady");
+                break;
+                case "1":
+                window.alert("Thanks Tar Gyi");
+                break;
+            }
+        }
+
+        //for country
+
+        document.getElementById('mmcity').style.display = "none";
+        document.getElementById('thcity').style.display = "none";
+
+        let country = document.getElementById("country");
+
+        function countryfun() {
+            switch(country.value) {
+            case("mm"):
+            document.getElementById("thcity").style.display = "none";
+            document.getElementById('mmcity').style.display = "block";
+            break;
+            case("th"):
+            document.getElementById('mmcity').style.display = "none";
+            document.getElementById("thcity").style.display = "block";
+            break;
+        }
+        }
+
+        
+
+
+    </script>
+    
+</body>
+</html>
